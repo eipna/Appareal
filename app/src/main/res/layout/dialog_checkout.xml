@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingEnd="24dp"
+    android:paddingStart="24dp"
+    android:paddingBottom="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/total_text"
+        android:text="Your total amount to be payed is 10000"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceBodyMedium"
+        android:layout_marginBottom="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:hint="Payment Method"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/payment_method"
+            app:simpleItems="@array/payment_method"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

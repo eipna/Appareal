@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.UserCartFragment">
+
+    <LinearLayout
+        android:id="@+id/empty_indicator"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:text="(ಥ﹏ಥ)"
+            android:textSize="38dp"
+            android:alpha="0.6"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:text="No orders found"
+            android:layout_marginTop="16dp"
+            android:alpha="0.6"
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/checkout"
+        app:icon="@drawable/ic_shopping_cart"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Checkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

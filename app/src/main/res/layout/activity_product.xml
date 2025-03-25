@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.ProductActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        app:liftOnScroll="true"
+        app:liftOnScrollTargetViewId="@id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            app:title="Product Details"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginBottom="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/product_price"
+                    android:text="Product Price"
+                    android:textAppearance="?attr/textAppearanceTitleLarge"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/product_description"
+                    android:text="Product Price"
+                    android:layout_marginTop="8dp"
+                    android:textAppearance="?attr/textAppearanceTitleSmall"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:paddingBottom="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="0.8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/product_stock"
+                android:text="Stock: 20"
+                android:textAppearance="?attr/textAppearanceBodySmall"
+                android:layout_gravity="center"
+                android:layout_marginBottom="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/deduct_quantity"
+                    app:icon="@drawable/ic_remove"
+                    style="?attr/materialIconButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/label_quantity"
+                    android:text="1"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/add_quantity"
+                    app:icon="@drawable/ic_add"
+                    app:iconGravity="end"
+                    style="?attr/materialIconButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_to_cart"
+            android:layout_weight="1"
+            android:text="Add to cart"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

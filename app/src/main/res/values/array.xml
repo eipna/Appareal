@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="valid_id">
+        <item>SSS</item>
+        <item>Philhealth</item>
+        <item>Driver\'s License</item>
+        <item>PRC License</item>
+        <item>National ID</item>
+    </string-array>
+
+    <string-array name="payment_method">
+        <item>COD (Cash on delivery)</item>
+    </string-array>
+
+    <string-array name="statuses">
+        <item>Verified</item>
+        <item>Packaged</item>
+        <item>Shipment</item>
+    </string-array>
+
+</resources>
